@@ -1,4 +1,5 @@
-import React from 'react';
-export default function AspectRatio() {
-  return <div>AspectRatio</div>;
-}
+import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio";
+
+const AspectRatio = AspectRatioPrimitive.Root;
+
+export { AspectRatio };
