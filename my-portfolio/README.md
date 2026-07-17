@@ -1,75 +1,69 @@
-# React + TypeScript + Vite
+# Eddy Yego Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website for Eddy Yego, a full-stack developer. It presents selected projects, skills, services, experience, and ways to get in touch.
 
-Currently, two official plugins are available:
+## Built with
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React and TypeScript
+- Vite
+- Tailwind CSS
+- TanStack Router
+- Framer Motion and GSAP for animations
 
-## React Compiler
+## Run the project locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+You need a recent version of [Node.js](https://nodejs.org/) installed.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open the local address shown in the terminal, usually `http://localhost:5173`.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Available commands
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Start the development server
+npm run dev
 
+# Create an optimized production build
+npm run build
+
+# Check the code for linting issues
+npm run lint
+
+# Preview the production build locally
+npm run preview
 ```
+
+## Project structure
+
+```text
+src/
+├── assets/        Images used by the website
+├── components/    Page sections, layout, and reusable UI components
+├── constants/     Portfolio content such as projects, skills, and links
+├── routes/        Application routes
+├── styles.css     Global styles and Tailwind theme settings
+└── main.tsx       Application entry point
+```
+
+## Updating content
+
+Most personal details are kept in `src/constants/portfolio.ts`. Update this file to change:
+
+- Social and contact links
+- Navigation links
+- Skills, experience, services, and statistics
+- Project descriptions, GitHub links, and deployment status
+
+Page sections are in `src/components/sections/`. For example, edit `Projects.tsx` to change how project cards look, or `Contact.tsx` to update the contact section.
+
+## Deployment
+
+Run `npm run build` before deploying. The generated `dist` folder contains the production-ready static site and can be deployed to services such as Vercel, Netlify, or GitHub Pages.
+
+## License
+
+This project is for Eddy Yego's personal portfolio. Do not reuse personal content or images without permission.
