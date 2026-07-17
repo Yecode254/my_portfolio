@@ -1,8 +1,8 @@
 import {
   Rocket, Zap, Smartphone, Shield,
   Code2, Server, Database, Wrench, Cloud,
-  Github, Instagram, Linkedin, Mail, Phone, MessageCircle,
-  Layers, Palette, Gauge, RefreshCw, Layout, PenTool,
+  Code2 as Github, Camera as Instagram, BriefcaseBusiness as Linkedin, Mail, Phone, MessageCircle,
+  Layers, Gauge, RefreshCw, Layout, PenTool,
 } from "lucide-react";
 
 export const SOCIALS = {

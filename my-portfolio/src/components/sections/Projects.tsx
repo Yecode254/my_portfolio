@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, ExternalLink } from "lucide-react";
+import { Code2, ExternalLink } from "lucide-react";
 import { PROJECTS } from "@/constants/portfolio";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -68,7 +68,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 rounded-full glass px-4 py-2 text-xs font-medium hover:border-brand/40 hover:text-brand transition-colors"
                     >
-                      <Github size={14} /> GitHub
+                      <Code2 size={14} /> GitHub
                     </a>
                     <a
                       href={p.demo}
