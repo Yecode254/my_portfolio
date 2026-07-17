@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, ExternalLink } from "lucide-react";
+import { Clock3, Code2, ExternalLink } from "lucide-react";
 import { PROJECTS } from "@/constants/portfolio";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
@@ -70,14 +70,20 @@ export function Projects() {
                     >
                       <Code2 size={14} /> GitHub
                     </a>
-                    <a
-                      href={p.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full bg-brand/90 text-primary-foreground px-4 py-2 text-xs font-semibold hover:bg-brand transition-colors"
-                    >
-                      <ExternalLink size={14} /> Live Demo
-                    </a>
+                    {p.demo ? (
+                      <a
+                        href={p.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full bg-brand/90 text-primary-foreground px-4 py-2 text-xs font-semibold hover:bg-brand transition-colors"
+                      >
+                        <ExternalLink size={14} /> Live Demo
+                      </a>
+                    ) : (
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-4 py-2 text-xs font-medium text-muted-foreground">
+                        <Clock3 size={14} /> {p.demoStatus}
+                      </span>
+                    )}
                   </div>
                 </div>
               </div>
